@@ -1,16 +1,15 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': 'HRMS',
+    'name': 'Only invoice billing create',
     'category': '',
     'sequence': 5,
-    'summary': 'HRMS',
+    'summary': '',
     'version': '15.0.1',
     'license': 'LGPL-3',
-    'price': '18.00',
     'currency': 'EUR',
-    'author': 'perception care india pvt ltd',
-    'website': 'https://perceptioncare.com/',
+    'author': 'Alphdevinfotech india pvt ltd',
+    'website': 'http://alphadevinfotech.com',
     'description': """
         """,
     'depends': ['account','website','web', 'mail','utm'],
