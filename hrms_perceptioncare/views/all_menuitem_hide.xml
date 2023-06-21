@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <menuitem name="Discuss"
+              id="mail.menu_root_discuss"
+              action="mail.action_discuss"
+              web_icon="mail,static/description/icon.png"
+              groups="hrms_perceptioncare.group_user_hide"
+              sequence="5"
+    />
+
+    <menuitem id="utm.menu_link_tracker_root"
+              name="Link Tracker"
+              sequence="270"
+              web_icon="utm,static/description/icon.png"
+              groups="hrms_perceptioncare.group_user_hide"/>
+
+    <menuitem name="Website"
+              id="website.menu_website_configuration"
+              sequence="95"
+              groups="hrms_perceptioncare.group_user_hide"
+              web_icon="website,static/description/icon.png"/>
+
+    <record id="account.res_partner_action_customer" model="ir.actions.act_window">
+        <field name="domain">[('create_uid','=',uid)]</field>
+    </record>
+</odoo>
