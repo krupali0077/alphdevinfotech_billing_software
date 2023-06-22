@@ -17,7 +17,7 @@
     'data': [
         'security/hrms_security_rule.xml',
         'views/all_menuitem_hide.xml',
-        # 'reports/invoice_inherit_view.xml',
+        'reports/invoice_inherit_view.xml',
 
     ],
     'installable': True,
