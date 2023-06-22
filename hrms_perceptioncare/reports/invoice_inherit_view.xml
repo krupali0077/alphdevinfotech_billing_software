@@ -2,92 +2,92 @@
 <odoo>
     <data>
         <template id="egyptian_invoice" inherit_id="account.report_invoice_document">
-<!--            <xpath expr="//t[@t-set='address']" position="before">-->
-<!--                <table class="table table-bordered">-->
-<!--                    <header>-->
-<!--                        <tr>-->
-<!--                            <td class="text-center" colspan="3">-->
-<!--                                <b>TAX INVOICES</b>-->
-<!--                            </td>-->
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                            <td colspan="3">-->
-<!--                                <h3>-->
-<!--                                    <b>-->
-<!--                                        <t t-esc="o.company_id.name"/>-->
-<!--                                    </b>-->
-<!--                                </h3>-->
-<!--                            </td>-->
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                            <td>-->
-<!--                                <t t-esc="o.company_id.street"/>-->
-<!--                            </td>-->
-<!--                            <td colspan="2">-->
-<!--                                <span>-->
-<!--                                    <b>Bank Details</b>-->
-<!--                                </span>-->
-<!--                            </td>-->
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                            <td>-->
-<!--                                <t t-esc="o.company_id.city"/>,<t t-esc="o.company_id.state_id.name"/>,-->
-<!--                                <t t-esc="o.company_id.zip"-->
-<!--                                />-->
-<!--                            </td>-->
-<!--                            <td>-->
-<!--                                <span>-->
-<!--                                    <b>A/C</b>-->
-<!--                                </span>-->
-<!--                            </td>-->
-<!--                            <td>-->
-<!--                                <span>10077256868</span>-->
-<!--                            </td>-->
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                            <td>-->
-<!--                                <span>MO:</span>-->
-<!--                                <t t-esc="o.company_id.mobile"/>-->
-<!--                            </td>-->
-<!--                            <td>-->
-<!--                                <span>-->
-<!--                                    <b>IFSC</b>-->
-<!--                                </span>-->
-<!--                            </td>-->
-<!--                            <td>-->
-<!--                                <span>IDFB0040322</span>-->
-<!--                            </td>-->
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                            <td>-->
-<!--                                <t t-esc="o.company_id.vat"/>-->
-<!--                            </td>-->
-<!--                            <td>-->
-<!--                                <span>-->
-<!--                                    <b>Branch</b>-->
-<!--                                </span>-->
-<!--                            </td>-->
-<!--                            <td>-->
-<!--                                <span>IDFC - Dholaka</span>-->
-<!--                            </td>-->
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                            <td>-->
-<!--                                <span>-->
-<!--                                    <b>Invoice NO:</b>-->
-<!--                                </span>-->
-<!--                                <t t-esc="o.name"/>-->
-<!--                            </td>-->
-<!--                            <td colspan="2">-->
-<!--                                <span>-->
-<!--                                    <b>Submitted On:</b>-->
-<!--                                </span>-->
-<!--                                <t t-esc="o.invoice_date"/>-->
-<!--                            </td>-->
-<!--                        </tr>-->
-<!--                    </header>-->
-<!--                </table>-->
-<!--            </xpath>-->
+            <xpath expr="//t[@t-set='address']" position="before">
+                <table class="table table-bordered">
+                    <header>
+                        <tr>
+                            <td class="text-center" colspan="3">
+                                <b>TAX INVOICES</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <h3>
+                                    <b>
+                                        <t t-esc="o.company_id.name"/>
+                                    </b>
+                                </h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <t t-esc="o.company_id.street"/>
+                            </td>
+                            <td colspan="2">
+                                <span>
+                                    <b>Bank Details</b>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <t t-esc="o.company_id.city"/>,<t t-esc="o.company_id.state_id.name"/>,
+                                <t t-esc="o.company_id.zip"
+                                />
+                            </td>
+                            <td>
+                                <span>
+                                    <b>A/C</b>
+                                </span>
+                            </td>
+                            <td>
+                                <span>10077256868</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>MO:</span>
+                                <t t-esc="o.company_id.mobile"/>
+                            </td>
+                            <td>
+                                <span>
+                                    <b>IFSC</b>
+                                </span>
+                            </td>
+                            <td>
+                                <span>IDFB0040322</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <t t-esc="o.company_id.vat"/>
+                            </td>
+                            <td>
+                                <span>
+                                    <b>Branch</b>
+                                </span>
+                            </td>
+                            <td>
+                                <span>IDFC - Dholaka</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>
+                                    <b>Invoice NO:</b>
+                                </span>
+                                <t t-esc="o.name"/>
+                            </td>
+                            <td colspan="2">
+                                <span>
+                                    <b>Submitted On:</b>
+                                </span>
+                                <t t-esc="o.invoice_date"/>
+                            </td>
+                        </tr>
+                    </header>
+                </table>
+            </xpath>
             <xpath expr="//div[@id='qrcode']" position="after">
                 <table class="table table-bordered">
                     <tr>
