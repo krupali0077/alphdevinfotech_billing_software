@@ -2,12 +2,61 @@
 <odoo>
     <data>
         <template id="egyptian_invoice" inherit_id="account.report_invoice_document">
-            <xpath expr="//t[@t-set='address']" position="before">
+            <xpath expr="//t[@t-set='address']" position="replace">
                 <table class="table table-bordered">
+                    <tr>
+                        <t t-set="address">
+                            <div t-if="o.partner_id.vat" class="mt16">
+                                <t t-if="o.company_id.account_fiscal_country_id.vat_label"
+                                   t-esc="o.company_id.account_fiscal_country_id.vat_label" id="inv_tax_id_label"/>
+                                <t t-else="">Tax ID</t>:
+                                <span t-field="o.partner_id.vat"/>
+                            </div>
+                        </t>
+                    </tr>
                     <header>
                         <tr>
                             <td class="text-center" colspan="3">
                                 <b>TAX INVOICES</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>
+                                    <b>Invoice For</b>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <t t-esc="o.partner_id.name"/>
+                            </td>
+                            <td colspan="2">
+                                <span><b>Payable to</b></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <t t-esc="o.partner_id.street"/>
+                            </td>
+                            <td colspan="2">
+                                <t t-esc="o.partner_id.name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <t t-if="o.partner_id.street2">
+                                <td>
+                                    <t t-esc="o.partner_id.street2"/>
+                                </td>
+                            </t>
+                        </tr>
+                        <tr>
+                            <td>
+                                <t t-esc="o.partner_id.city"/>,<t t-esc="o.partner_id.state_id.name"/>,
+                                <t t-esc="o.partner_id.zip"/>
+                            </td>
+                            <td colspan="2">
+                                <t t-esc="o.partner_id.mobile"/>
                             </td>
                         </tr>
                         <tr>
@@ -92,7 +141,9 @@
                 <table class="table table-bordered">
                     <tr>
                         <td colspan="5">
-                            <span><b>Terms &amp; Condition :</b></span>
+                            <span>
+                                <b>Terms &amp; Condition :</b>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -126,7 +177,11 @@
                     </tr>
                     <tr class="text-center">
                         <td>
-                            <span><h5><b>** This is computer genrated invoice no signutere required. **</b></h5></span>
+                            <span>
+                                <h5>
+                                    <b>** This is computer genrated invoice no signutere required. **</b>
+                                </h5>
+                            </span>
                         </td>
                     </tr>
                 </table>
