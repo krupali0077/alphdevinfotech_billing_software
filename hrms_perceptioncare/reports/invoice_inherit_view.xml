@@ -26,22 +26,23 @@
                                     <b>Invoice For</b>
                                 </span>
                             </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <t t-esc="o.partner_id.name"/>
-                            </td>
                             <td colspan="2">
                                 <span><b>Payable to</b></span>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <t t-esc="o.partner_id.street"/>
+                                <t t-esc="o.partner_id.name"/>
                             </td>
                             <td colspan="2">
                                 <t t-esc="o.partner_id.name"/>
                             </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <t t-esc="o.partner_id.street"/>
+                            </td>
+
                         </tr>
                         <tr>
                             <t t-if="o.partner_id.street2">
